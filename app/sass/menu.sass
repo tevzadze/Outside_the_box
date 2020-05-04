@@ -1,0 +1,183 @@
+@import './common/vars.sass'
+@import './common/gem.scss'
+
+//mobile-menu
+.mobile-menu
+    height: 100vh  
+    width: gem(530)
+    background: #fff
+    position: fixed
+    z-index: 2
+    right: gem(-530)
+    pointer-events: auto
+    top: 0
+    transition: all 0.375s ease
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &.active
+        right: 0
+    .close-menu
+        display: flex
+        position: absolute
+        top: gem(30)
+        right: gem(50)
+        width: gem(50)
+        height: gem(50)
+        justify-content: center
+        align-items: center
+        span
+            display: block
+            content: ''
+            width: gem(70)
+            height: gem(4)
+            background: #2d2d32
+            transform: rotate(-45deg)
+            &:after
+                display: block
+                content: ''
+                width: gem(70)
+                height: gem(4)
+                background: #2d2d32
+                transform: rotate(-90deg)
+                position: relative
+                top: gem(0)
+    .menu
+        &-title
+            font-family: var(--main-font)
+            font-weight: 900
+            font-size: gem(72)
+            line-height: gem(72)
+            margin-left: gem(52)
+            margin-top: gem(20)
+            text-transform: uppercase
+            color: #2D2D32
+        &-bottom
+            margin-bottom: gem(36)
+            margin-left: gem(52)
+            .contact-us
+                margin-bottom: gem(34)
+                a
+                    font-weight: 800
+                    display: block
+                    color: #000
+                    font-size: gem(18)
+                    line-height: gem(24)
+                    padding-bottom: gem(20)
+                    width: gem(272)
+                    border-bottom: gem(1) #2D2D32 solid
+                    text-align: center
+                    text-transform: uppercase      
+                    transition: all 0.3s ease   
+                    &:hover
+                        color: #E42143
+        &-social
+            display: flex
+            flex-direction: row
+            a
+                color: #2D2D32
+                font-size: gem(18)
+                line-height: gem(48)
+                font-weight: 300
+                margin-right: gem(25)
+                display: flex
+                flex-direction: column
+                justify-content: center
+                transition: all 0.3s ease
+                &:first-child
+                    margin-right: gem(52)
+                    &:after
+                        display: inline-block
+                        content: ''
+                        background: #2D2D32
+                        width: 0px
+                        height: 1px
+                        transition: all 0.3s ease
+                        margin-top: gem(3)
+                    &:hover
+                        color: #E42143
+                        &:after
+                            width: 100%
+                svg
+                    width: gem(20)
+                    fill: #2D2D32
+                    transition: all 0.3s ease
+                &:hover
+                    svg
+                        fill: #E42143
+        &-middle
+            &-main
+                display: flex
+                flex-direction: column
+                a
+                    font-size: gem(48)
+                    line-height: gem(48)
+                    color: #2D2D32
+                    font-weight: 900
+                    margin-left: gem(52)
+                    margin-bottom: gem(30)
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    transition: all 0.3s ease
+                    width: auto
+                    &:nth-child(4)
+                        margin-bottom: 0
+                    .menu-link-line
+                        display: block
+                        width: gem(0)
+                        height: gem(1)
+                        background: #E42143
+                        margin-right: gem(0)
+                        transition: all 0.3s ease
+                    &:hover
+                        // color: #E42143
+                        margin-left: gem(30)
+                        .menu-link-line
+                            background: #2D2D32
+                            width: gem(20)
+                            margin-right: gem(30)
+                    &.active
+                        margin-left: gem(30)
+                        color: #E42143
+                        .menu-link-line
+                            width: gem(52)
+                            margin-right: gem(30)
+                            background: #E42143
+
+
+
+
+//for mebu-anim        
+.body-gradient
+    background: rbga(0,0,0,0)
+    width: 100%
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 9999
+    pointer-events: none
+    transition: all 0.375s ease
+    &.active
+        background: rgba(0,0,0,0.5)
+        left: gem(-530)
+.menu-active
+    left: gem(-530)
+    overflow: hidden
+    pointer-events: none
+.active-menu-body
+    overflow: hidden
+//menu-anim end
+@media all and (max-width: 1024px)
+    .mobile-menu 
+        .menu-title
+            margin-left: gem(30)
+        .close-menu
+            right: gem(30)
+        .menu-middle-main 
+            a
+                margin-left: gem(30)
+        .menu-bottom
+            margin-left: gem(30)
+            margin-bottom: gem(30)

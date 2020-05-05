@@ -940,6 +940,7 @@ button[type='submit']
         .text-outline
             right: gem(200)
             top: gem(50)
+
 @media all and (max-width: 768px)
     .faq
         &-left
@@ -947,23 +948,22 @@ button[type='submit']
             &-form
                 width: 100%
                 background: #fff
+        .text-outline
+            text-align: left
+            left: gem(50)
     .solutions
         .middle_part
             max-width: gem(395)
 
     .portfolio
-        .works_owl
-            // width: gem(2000)
         .slide
             margin-left: gem(100)
             width: 100%
-
             &.titile_hide
                 margin-left: gem(100)
             &-left
-            
                 &-image
-                    width: gem(250)
+                    width: gem(350)
             &-right
                 padding-right: 0
                 h3
@@ -973,9 +973,148 @@ button[type='submit']
                     margin-top: gem(50)
                 p
                     margin-top: gem(5)
-                    font-size: gem(10)
+                    font-size: gem(13)
                     line-height: gem(15)
                     width: gem(120)
+
+@media all and (max-width: 480px)
+    .main_section 
+        h1
+            font-size: gem(36)
+            line-height: gem(24)
+    .solutions 
+        &-navigation
+            right: gem(47)
+            &-buttons
+                span
+                    font-size: gem(10)
+                    line-height: gem(10)
+                &-left, &-right
+                    padding: gem(10) gem(6)
+        .left_part 
+            width: gem(40)
+            .text
+                width: gem(100)
+                height: gem(10)
+                font-size: gem(10)
+                line-height: gem(10)
+                color: white
+                position: absolute
+                z-index: 5
+                right: gem(-25)
+                margin: 0 auto
+            .line_numbers
+                .numbers
+                    width: gem(50)
+                    height: gem(50)
+                    transform: rotate(-90deg)
+                    span
+                        font-size: gem(10)
+                        &:nth-child(1)
+                            font-size: gem(12)
+                        &:nth-child(3)
+                            top: gem(0)
+
+        .right_part
+            width: gem(47)
+        .middle_part
+            width: gem(257)
+            .slide-img
+                display: none !important
+    .portfolio
+        .works-navigation
+            left: gem(47) !important
+            &-buttons
+                span
+                    font-size: gem(10)
+                    line-height: gem(10)
+                &-left, &-right
+                    padding: gem(10) gem(6)
+        .portfolio-title
+            width: gem(47)
+            .title-h2
+                font-size: gem(10)
+                line-height: gem(10)
+                width: gem(100)
+        .slide
+            margin-left: gem(50)
+            width: 100%
+            &.titile_hide
+                margin-left: gem(100)
+            &-left
+                &-image
+                    width: gem(192)
+            &-right
+                right: gem(70)
+                position: absolute
+                h3
+                    font-size: gem(24)    
+                    line-height: gem(24)
+                    top: gem(70)
+                p
+                    top: gem(55)
+                    left: gem(50)
+                    font-size: gem(12)
+                    line-height: gem(16)
+                    width: gem(140)
+    .faq
+        &-navigation
+            right: gem(47) !important
+            &-buttons
+                span
+                    font-size: gem(10)
+                    line-height: gem(10)
+                &-left, &-right
+                    padding: gem(10) gem(6) !important
+        &-left
+            &-questions
+                width: gem(260)
+                margin-left: gem(-40)
+                .question
+                    width: gem(260)
+                    min-height: gem(40)
+                    &-title
+                        h4
+                            font-size: gem(12)
+                    &-content
+                        p 
+                            font-size: gem(12)
+                            line-height: gem(12)
+            &-form
+                h3
+                    font-size: gem(18)
+                    line-height: gem(21)
+                p
+                    width: gem(240)
+                    font-size: gem(12)
+                    line-height: gem(16)
+                form
+                    width: gem(290)
+
+        &-right
+            width: gem(47)
+            h2
+                font-size: gem(10)
+    .contacts_form
+        form
+            width: gem(350)
+            margin-left: gem(-24)
+    .mobile-menu
+        width: gem(400)
+        .menu-title 
+            font-size: gem(36)
+            padding-left: gem(30)
+        .menu-middle
+            margin-left: gem(30)
+            .menu-middle-main
+                a 
+                    font-size: gem(24)
+        .menu-bottom
+            a
+                margin: 0 auto
+
+
+
         
 
 

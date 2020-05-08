@@ -1,4 +1,48 @@
 $(function() {
+    //one page scroll
+
+
+
+var scrollPos = 0;
+var inScroll = false;
+var win = $(window).height();
+var count = 1;
+var test = 0;
+
+$(window).scroll(function(e){
+   var st = $(this).scrollTop();
+
+   if(!inScroll){
+    inScroll = true
+    test = win*count;
+    console.log(inScroll);
+        if (st > scrollPos){
+            count++;
+            $('body,html').animate({
+                scrollTop: test
+            }, 1000,"linear", function(){
+                inScroll = false;
+
+            });  
+
+        } else {    
+            console.log('up');
+            count--;
+            $('body,html').animate({
+                scrollTop: test
+            }, 1000,"linear", function(){
+                inScroll = false;
+
+            });
+
+        }
+   }
+   
+    scrollPos = st;
+});
+
+
+
     // menu
 
     $('.menu-burger a').on('click', function() {
@@ -18,7 +62,7 @@ $(function() {
         $('.body-gradient').removeClass('active');
         $('body').removeClass('active-menu-body')
     })
-    $('.mobile-menu a').mPageScroll2id({ scrollSpeed: 700 });
+
 
     // menu - links change active 
     jQuery(window).scroll(function() {

@@ -1,9 +1,31 @@
 $(function() {
     //one page scroll
 
+var scrollCount = 0
+      $('.fullPage').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        vertical: true,
+        verticalSwiping: true,
+        speed: 600,
+        infinite: false
+      });
+    $('.fullPage').on('wheel', (function(e) {
+    e.preventDefault();
 
+    clearTimeout(scroll);
+    scroll = setTimeout(function(){scrollCount=0;}, 200);
+    if(scrollCount) return 0;
+    scrollCount=1;
 
-var scrollPos = 0;
+    if (e.originalEvent.deltaY < 0) {
+        $(this).slick('slickPrev');
+    } else {
+        $(this).slick('slickNext');
+    }
+}));
+/*var scrollPos = 0;
 var inScroll = false;
 var win = $(window).height();
 var count = 1;
@@ -39,7 +61,7 @@ $(window).scroll(function(e){
    }
    
     scrollPos = st;
-});
+});*/
 
 
 

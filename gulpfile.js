@@ -48,6 +48,7 @@ gulp.task('scripts', function() {
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/owl/owl.carousel.js',
 		'app/libs/pagescroll/jquery.malihu.PageScroll2id.min.js',
+		'app/libs/slick/slick.min.js',
 		'app/js/common.js', // Always at the end
 		], { allowEmpty: true })
 	.pipe(concat('scripts.min.js'))
